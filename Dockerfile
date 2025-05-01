@@ -12,7 +12,7 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Collect static files (optional for production)
-RUN python3 manage.py collectstatic --noinput
+# RUN python3 manage.py collectstatic --noinput
 
 # Run the server
 CMD ["gunicorn", "purecart.wsgi:application", "--bind", "0.0.0.0:8000"]
