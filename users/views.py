@@ -19,7 +19,7 @@ class Test(RetrieveAPIView):
     userinfo = Users.objects.all()
     def get(self,request):
         try:
-            return Response({"status":"success"},status=status.HTTP_200_OK) 
+            return Response({"status":"success","message":"Retrived successfully"},status=status.HTTP_200_OK) 
         except Exception as error:
             return Response({"status":"failure"},status=status.HTTP_400_BAD_REQUEST)
 
