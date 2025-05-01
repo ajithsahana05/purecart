@@ -25,7 +25,7 @@ jobs:
       - name: Build and Run Docker on EC2
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
-            cd /home/ubuntu/purecart/purecart/
+            cd /home/ubuntu/purecart/purecart
             docker build -t purecart-app .
             docker stop purecart-app || true
             docker rm purecart-app || true
